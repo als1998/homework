@@ -15,7 +15,7 @@ end
 
 logistic=x_out;
 
-piclogistic=drawpic(logistic);
+drawpic(logistic);
 
 %% tent
 
@@ -32,7 +32,7 @@ for i_a=1:size(a,2)
 end   
 
 tent=x_out;
-piclogistic=drawpic(tent);
+drawpic(tent);
 
 %% bernoulli
 
@@ -49,7 +49,6 @@ for i_B=1:size(B,2)
 end   
 
 bernoulli=x_out;
-
-piclogistic=drawpic(bernoulli);
+drawpic(bernoulli);
 
 

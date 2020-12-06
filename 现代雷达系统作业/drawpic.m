@@ -1,4 +1,4 @@
-function  picdata=drawpic(inputArg1)
+function  drawpic(inputArg1)
     rawdata = inputArg1;
     picsize=size(rawdata);
     rawdata=fix((rawdata+abs(min(min(rawdata)))).*picsize(1)./(max(max(rawdata))-min(min(rawdata))));
