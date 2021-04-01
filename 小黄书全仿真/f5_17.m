@@ -8,6 +8,13 @@ Fs = 7.5e6;
 PRF = 104;
 Naz = 256;
 Nrg = 256;
-theta_sq=0;
-eta_c=0;
-f_etac=0;
+theta_sq=22.8;
+eta_c=-51.7;
+f_etac=2055;
+R0=sqrt(R_etac^2-V_r^2*eta_c^2);
+
+DeltaEta=1/PRF;
+
+
+eta = linspace(-DeltaEta*Naz/2,DeltaEta*Naz/2,Naz)+eta_c;
+tau = 

@@ -1,0 +1,25 @@
+clc,clear all;
+t = 10e-6;
+fs = 40e6;
+ts=1/fs;
+fc= 9e6;
+f0=10e6;
+B=2e6;
+ft=0:1/fs:t-1/fs;
+N=length(ft);
+k=B/fs*2*pi/max(ft);
+y=modulate(ft,fc,fs,'fm',k);
+y_fft_result=fft(y);
+n=0:N-1;
+local_i=cos(n*f0/fs*2*pi);
+local_q=cos(n*f0/fs*2*pi);
+fbb_i=local_i.*y;
+fbb_q=local_q.*y;
+window=chebwin(51,40);
+[b,a]=fir1(50,2*B/fs,window);
+fbb_i=filter(b,a,fbb_i);
+fbb_q=filter(b,a,fbb_q);
+fbb=fbb_i+fbb_q;
+plot(fbb_i);
+figure
+plot(fbb_q);

@@ -3,7 +3,7 @@ close all;clear all;clc;
 T = 10e-6;          % 脉冲持续时间
 B = 15e6;           % 脉冲带宽
 k = B/T;            %调频率
-ratio = 5;          %过采样率
+ratio = 1.2;          %过采样率
 Fs = ratio*B;       %采样率
 Ts = 1/Fs;
 N=fix(T.*Fs);

@@ -18,7 +18,7 @@ logistic=x_out;
 drawpic(logistic);
 
 %% tent
-
+clc ,clear;
 xn0 = [0:0.001:1];
 xn1 = [0:0.001:1];
 a = [1.0:0.0005:2];
@@ -35,7 +35,7 @@ tent=x_out;
 drawpic(tent);
 
 %% bernoulli
-
+clc ,clear;
 xn0 = [-0.5:0.001:0.5];
 xn1 = xn0;
 B = [1.0:0.0005:2];
